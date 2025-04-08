@@ -7,7 +7,14 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
+            <ListView x:Name="listeUtilisateurs">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nom}" Detail="{Binding Prenom}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!-- <Image
                 Source="dotnet_bot.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
@@ -29,7 +36,7 @@
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+                HorizontalOptions="Fill" /> -->
         </VerticalStackLayout>
     </ScrollView>
 

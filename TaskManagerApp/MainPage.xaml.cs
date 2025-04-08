@@ -2,23 +2,37 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+	// int count = 0;
+	//
+	// public MainPage()
+	// {
+	// 	InitializeComponent();
+	// }
+	//
+	// private void OnCounterClicked(object sender, EventArgs e)
+	// {
+	// 	count++;
+	//
+	// 	if (count == 1)
+	// 		CounterBtn.Text = $"Clicked {count} time";
+	// 	else
+	// 		CounterBtn.Text = $"Clicked {count} times";
+	//
+	// 	SemanticScreenReader.Announce(CounterBtn.Text);
+	// }
 
-	public MainPage()
+	private readonly UserService _userService;
+	public MainPage(UserService userService)
 	{
 		InitializeComponent();
+		_userService = userService;
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	protected override async void OnAppearing()
 	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		base.OnAppearing();
+		var users = await _userService.ObtenirUtilisateursAsync();
+		listeUtilisateurs.ItemsSource = users;
 	}
 }
 
