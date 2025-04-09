@@ -6,6 +6,9 @@ public class TaskMasterDbContext : DbContext
 
     // Table des utilisateurs
     public DbSet<User> Users { get; set; }
+    public DbSet<Tache> Taches { get; set; }
+    public DbSet<SousTache> SousTaches { get; set; }
+    public DbSet<Comment> Comments { get; set; }
 
     public TaskMasterDbContext(DbContextOptions<TaskMasterDbContext> options) : base(options) { }
 

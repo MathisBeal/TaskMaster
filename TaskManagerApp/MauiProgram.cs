@@ -50,6 +50,9 @@ public static class MauiProgram
 #endif
 
         builder.Services.AddSingleton<UserService>();
+        builder.Services.AddSingleton<TaskService>();
+        builder.Services.AddSingleton<SubTaskService>();
+        builder.Services.AddSingleton<CommentService>();
 
         return builder.Build();
     }

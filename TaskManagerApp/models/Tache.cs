@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TaskManagerApp
 {
-    public class Task
+    public class Tache
     {
         [Key]
         public int idTasks { get; set; }
