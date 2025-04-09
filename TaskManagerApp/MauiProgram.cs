@@ -1,4 +1,6 @@
-﻿using DotNetEnv;
+﻿#define DEBUG
+
+using DotNetEnv;
 using DotNetEnv.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -41,6 +43,7 @@ public static class MauiProgram
 
             options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
         });
+
 
 #if DEBUG
         builder.Logging.AddDebug();
