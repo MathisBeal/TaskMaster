@@ -14,3 +14,9 @@ Sur windows, le fichier `docker-cmd.bat` est un utilitaire pour faciliter la mis
 
 ### Connection
 La base se trouve sur le port 3306, et les logins de base se trouvent dans le `.env`.
+
+## Le projet
+Pour run/compile le projet, lancer la commande:
+```sh
+dotnet run --framework net9.0-windows10.0.19041.0
+```
