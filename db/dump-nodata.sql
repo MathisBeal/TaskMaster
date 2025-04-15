@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `Comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Comments` (
-  `idComments` int NOT NULL,
+  `idComments` int NOT NULL AUTO_INCREMENT,
   `idTask` int NOT NULL,
   `idAuteur` int DEFAULT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS `SubTasks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `SubTasks` (
-  `idSubTask` int NOT NULL,
+  `idSubTask` int NOT NULL AUTO_INCREMENT,
   `idTask` int NOT NULL,
   `titre` varchar(127) NOT NULL,
   `status` enum('a faire','en cours','terminee','annulee') NOT NULL DEFAULT 'a faire',
