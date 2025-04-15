@@ -21,10 +21,10 @@
 		<Nullable>enable</Nullable>
 
 		<!-- Display name -->
-		<ApplicationTitle>TaskManagerApp</ApplicationTitle>
+		<ApplicationTitle>TaskMaster</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.taskmanagerapp</ApplicationId>
+		<ApplicationId>com.companyname.taskmaster</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>

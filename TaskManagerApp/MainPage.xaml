@@ -14,6 +14,8 @@
 			<Entry x:Name="PasswordEntry" Placeholder="Mot de passe" IsPassword="True" />
 			<Button Text="Se connecter" Clicked="OnLoginClicked" />
 
+			<Button Text="Créer un compte" Clicked="OnRegisterClicked" />
+
 			<!-- Liste des utilisateurs -->
 			<ListView x:Name="listeUtilisateurs">
 				<ListView.ItemTemplate>

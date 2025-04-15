@@ -65,4 +65,9 @@ public partial class MainPage : ContentPage
 
         await CheckLogAsync(email, password);
     }
+
+    private async void OnRegisterClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new RegisterPage(_userService));
+    }
 }
