@@ -3,27 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TaskManagerApp.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
+	<ScrollView>
+		<VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-        <Label Text="Empty" />
-            <ListView x:Name="listeUtilisateurs">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Vertical" Padding="10">
-                                <Label Text="{Binding idUsers}" />
-                                <Label Text="{Binding nom}" />
-                                <Label Text="{Binding prenom}" />
-                                <Label Text="{Binding email}" />
-                                <Label Text="{Binding password}" />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </VerticalStackLayout>
-    </ScrollView>
+
+			<!-- Formulaire de Connexion -->
+			<Label Text="Formulaire de Connexion" FontSize="24" HorizontalOptions="Center" />
+			<Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
+			<Entry x:Name="PasswordEntry" Placeholder="Mot de passe" IsPassword="True" />
+			<Button Text="Se connecter" Clicked="OnLoginClicked" />
+
+			<!-- Liste des utilisateurs -->
+			<ListView x:Name="listeUtilisateurs">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Vertical" Padding="10">
+								<Label Text="{Binding idUsers}" />
+								<Label Text="{Binding nom}" />
+								<Label Text="{Binding prenom}" />
+								<Label Text="{Binding email}" />
+								<Label Text="{Binding password}" />
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+		</VerticalStackLayout>
+	</ScrollView>
 
 </ContentPage>
