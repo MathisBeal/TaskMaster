@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskManagerApp.HomePage"
+             Title="My Tasks">
+
+    <StackLayout Padding="20">
+        <Label Text="Tasks Created by You" FontSize="24" HorizontalOptions="Center" />
+
+        <CollectionView x:Name="TasksCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Gray" Padding="10" Margin="5">
+                        <StackLayout>
+                            <Label Text="{Binding titre}" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="{Binding description}" FontSize="14" />
+                            <Label Text="{Binding echeance, StringFormat='Due: {0:MM/dd/yyyy}'}" FontSize="12" TextColor="Gray" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+</ContentPage>
